@@ -4,32 +4,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*header*/
+/*-----header-----*/
+
 header {
     display: flex;
     width: 100%;
     height: 10vh;
-    
     justify-content: space-between;
     background-color: #FFFFFF;
     position: fixed;
     z-index: 1;
 }
 
+header div {
+    display: none;
+}
+
 h1 {
     display: flex;
     align-items: center;
-    
     height: 10vh;
     width: 12vw;
     justify-content: end;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;  
 }
+
 .menu {
     transition: ease-in-out 1s;
     transform: translateX(0) scale(1.0);  
-    font-size:100% ;
+    font-size: 100%;
 }
 
 .menu:hover {
@@ -45,14 +48,13 @@ h1 {
     transform: translateX(0) scale(1.0);
     cursor: pointer;
     font-size:100% ;
-    
 }
+
 .negrito:hover {
     color: black;
     font-size: 110%;
     transform: translateX(0px) scale(1.1);
     font-weight: bold;
-
 }
 
 nav ul {
@@ -63,37 +65,34 @@ nav ul {
     width: 42vw;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
-    
-    
+    height: 10vh;  
 }
 
 ul li {
-   
     width: 3vw;
     height: 3vh;
     cursor: pointer;
 }    
 
+/*-----main-----*/
 
-/*main*/
 .laranja {
     width: 100%;
     height: 70vh;
 }
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF; 
-     
     width: 70vw;
     height: 9vh;
     position: relative;
     bottom: 20vw;
     left: 12vh;
-    font-size: 4vw;
-    
+    font-size: 4vw;  
 }
-a {
+
+.frase {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     bottom: 18vw;
@@ -102,27 +101,24 @@ a {
     font-size: 190%;
     text-decoration: none;
     transition: ease-in-out 1s;
-    transform: translateX(0) scale(1.0);
-    
+    transform: translateX(0) scale(1.0); 
 }
-a:hover {
+
+.frase:hover {
     color: #FFFFFF; 
     font-size: 210%;
     text-decoration: underline;
-    transform: translateX(0px) scale(1.1);
-    
+    transform: translateX(0px) scale(1.1); 
 }
 
 main {
     width: 100%;
     height: 217vh;
-    
 }
 
 .firstsect {
     width: 100%;
-    height: 80vh;
-    
+    height: 80vh; 
 }
 
 .secondsect {
@@ -130,144 +126,294 @@ main {
     height: 128vh;
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
 }
+
 figure {
     width: 22vw;
     height: 41vh;
-    
 }
 
 .imgsmain {
- width: 21vw;  
- height: 40vh; 
- cursor: pointer;
- transition: ease-in-out 1s;
-  transform: translateX(0) scale(1.0);
+    width: 21vw;  
+    height: 40vh; 
+    cursor: pointer;
+    transition: ease-in-out 1s;
+    transform: translateX(0) scale(1.0);
 }
+
 .imgsmain:hover {
-    
-    
     transform: translateX(-3%) scale(1.1);
    }
-/*footer*/
+
+/*-----footer-----*/
 
 footer {
     display: flex;
     width: 100%;
     height: 15vh;
-    
     background-color: #f0efef;
     justify-content: space-around;
 }
+
 footer section {
     display: flex;
     width: 28vw;
     height: 15vh;
-    
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     position: relative;
     right: 3vw;
 }
+
 .icones {
+    cursor: pointer;   
+}
+.iconeface {
+    cursor: pointer;  
+}
+.iconeinsta {
     cursor: pointer;
-    
+}
+.iconezap {
+    cursor: pointer;
+}
+.iconeyoutube {
+    cursor: pointer;
 }
 
 footer nav {
     display: flex;
     width: 33vw;
     height: 15vh;
-    
     justify-content: space-between;
     align-items: center;
     position: relative;
     right: 13vw;
 }
-h3 {
-    
+
+h3 { 
     width: 6vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
-p {
-    
+
+p { 
     width: 26vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 80%;
 }
 
-@media (max-width: 667px) {
+.topo {
+    display: none;
+}
+
+@media (max-width: 790px) {
+    
     header {
         height: 4vh;
-        justify-content: center;
-        border: 1px solid;
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
     h1 {
-       font-size: 100%;
+        font-size: 120%;
+        width: 50vw;
+        height: 4vh;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        right: 15vh;
     }
+
+    .fa {
+        color: white;
+        position: absolute;
+        height: 5vw;
+        left: 12vw;
+        top: 0vh;
+        z-index: 2;
+        font-size: 7vw;
+        text-decoration: none; 
+    }
+    
+    .dropbtn {
+        background-color:black;
+        height: 4vh;
+        width: 500vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column; 
+      }
+      
+      .dropdown {
+        position: relative;
+        display: flex;
+        cursor: pointer;
+        width: 30vw;
+        height: 4vh;
+      }
+      
+      .dropdown-content {
+        width: 1vw;
+        height: 1vh;
+        position: absolute;
+        top: 4vh;
+        left: 5vw;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      
+      .dropdown-content a {
+        color:rgb(180, 180, 180);
+        width: 25vw;
+        height: 5vh;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        border: 1px solid white;
+        align-items: center;
+        background-color: #0C0500;
+        justify-content: center;
+        position: relative;
+        right: 5vw;
+      }
+      
+      .dropdown-content a:hover {color: white;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #0C0500;}
+
+    ul li {
+        display: none; 
+    }
+
     main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 680vh;
-        border: 1px solid yellow;
+        height: 607vh;    
     }
+
+    .firstsect {
+        width: 100%; 
+        height: 77vh;
+    }
+
+    h2 {  
+        width: 80vw;
+        height: 18vh;
+        position: relative;
+        bottom: 28vh;
+        left: 10vw;
+        font-size: 300%; 
+    }
+
+    .frase {
+        height: 10vh;
+        font-size: 120%;
+        position: relative;
+        bottom: 26vh;
+        left: 11vw;
+    }
+
+    .frase:hover {
+        color: #FFFFFF; 
+        font-size: 135%;
+        text-decoration: underline;
+        transform: translateX(0px) scale(1.1);
+    }
+
     figure {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 50vh;
+        height: 44vh;
         align-items: center;
+        justify-content: center; 
     }
-    .imgsmain {
+
+    .imgsmain { 
         width: 80vw;
-        height: 45vh;
+        height: 40vh; 
     }
 
     footer {
-      width: 100%;
-      height: 32vh;
-      background-color: #FFFFFF;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      border: 1px solid green;
+        width: 100%;
+        height: 19vh;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;  
     }
+
     footer section {
-        border: 1px solid rgb(251, 127, 255);
-        width: 90vw;
-        height: 10vh;
+        width: 80vw;
+        height: 6vh;
         background-color: #7FDBD4;
+        position: relative;
+        left: 0vw;
+        justify-content: space-evenly;
     }
+
     .icones {
-        width: 9vw;
-        border: 1px solid tan;
+        width: 7vw;  
+    }
+    .iconeface {
+        width: 3vw;  
+    }
+    .iconeinsta {
+        width: 6vw;
+    }
+    .iconezap {
+        width: 6vw;
+    }
+    .iconeyoutube {
+        width: 8vw;
     }
 
     footer nav {
         justify-content: center;
         width: 50vw;
-        height: 18vh;
+        height: 12vh;
         flex-direction: column;
-        border: 1px solid red;
         position: relative;
-        right: 18vw;
+        right: 15vw;
+        top: 3vh;
         align-items: flex-start;
     }
+
     h3 {
-        font-size: 80%;
+        font-size: 65%;
     }
 
-    p {
-        border: 1px solid yellow;
-        width: 50vw;
-        height: 15vh;
+    p {  
+        width: 42vw;
+        height: 9vh;
         display: flex;
         flex-direction: column;
+        font-size: 70%;
+    }
+
+    .topo {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #333333;
+        font-weight: bold;
+        color: #5b5c5b;
+        font-size: 90%;
+        text-decoration: none;
+        width: 15vw;
+        height: 4vh;
+        position: relative;
+        left: 32vw;
+        bottom: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topo:hover {
+        color: rgb(199, 198, 198);
     }
 }
