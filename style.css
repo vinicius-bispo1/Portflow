@@ -303,18 +303,18 @@ p {
 
     h2 {  
         width: 80vw;
-        height: 18vh;
+        height: 24vh;
         position: relative;
-        bottom: 28vh;
+        bottom: 30vh;
         left: 10vw;
-        font-size: 300%; 
+        font-size: 300%;  
     }
 
     .frase {
         height: 10vh;
         font-size: 120%;
         position: relative;
-        bottom: 26vh;
+        bottom: 30vh;
         left: 11vw;
     }
 
